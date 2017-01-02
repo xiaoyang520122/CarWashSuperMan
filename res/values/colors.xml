@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="title_bg">@drawable/tigle_bg_img</color>
+    <color name="content_bg">#fffbf8ee</color>
+    <color name="bottom_bg">#fffafafa</color>
+    <color name="bottom_top_line_bg">#ffcccccc</color>
+    <color name="bottom_text">#ff454545</color>
+    <color name="main_bottom_text">#ffb5b5b5</color>
+    <color name="bottom_text_clicked">#fffe5600</color>
+    <color name="btn_bg_clicked">#ffff5500</color>
+    <color name="btn_bg">#fffd6419</color>
+    <color name="invest_item_text_progress">#ff999999</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="red">#ffff0000</color>
+    <color name="green">#ff00ff00</color>
+    <color name="blue">#ff0000ff</color>
+    <color name="invest_detail_tab">#ff454545</color>
+    <color name="invest_detail_tab_click">#ff8f6096</color>
+    <color name="account_ll_border_color">#fff3f3f3</color>
+    <color name="dialog_item_color">#ffff7f24</color>
+    <color name="chyc_color">#ffffe4e1</color>
+    <color name="chyc_item_text_color">#ffe5e5e5</color>
+    <color name="chyc_dialog_topview">#ffb1b1b1</color>
+    <color name="chyc_dialog_top_button">#fff3f3f3</color>
+    <color name="auto_queue_bg">#fff4f4f4</color>
+    
+    <!-- 2016-11-02 -->
+    <color name="orange">#ffff8903</color>
+    <color name="light_s_gray">#ffcccccc</color>
+    <color name="c333">#ff333333</color>
+    <color name="c666">#ff666666</color>
+    <color name="c999">#ff999999</color>
+    <color name="bulue_main">#ff07B6F3</color>
+    <color name="bulue_H_main">#ff069ACB</color>
+    <color name="hui_main">#ff7e7d83</color>
+    <color name="yellow_main">#ffff8024</color>
+    <color name="hui_line">#ffd7d7d7</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color> 
+    <color name="gb_hui_main">#ffdfddde</color>
+    <color name="bg_hui_main">#ffeeeded</color>
+</resources>

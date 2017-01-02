@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="AppBaseTheme" parent="@android:style/Theme.Light" />
+    <style name="AppTheme" parent="@style/AppBaseTheme">
+        <!--此处注销了不再显示标题栏的设置还原为默认  >item name="android:windowNoTitle">true</item -->
+         <!--下面一句去掉标题栏下面的 阴影  
+       <item name="android:windowContentOverlay">@null</item> -->
+    </style>
+    <style name="BaseTextview">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="Spinner">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:clickable">true</item>
+        <item name="android:dropDownWidth">wrap_content</item>
+        <item name="android:dropDownHorizontalOffset">0.0dip</item>
+        <item name="android:dropDownVerticalOffset">0.0dip</item>
+    </style>
+    <style name="title_bg">
+        <item name="android:background">@color/title_bg</item>
+    </style>
+    <style name="title_text" parent="@style/BaseTextview">
+        <item name="android:textSize">@dimen/title_text_textsize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingTop">10.0dip</item>
+        <item name="android:paddingBottom">10.0dip</item>
+    </style>
+    <style name="title_btn" parent="@style/BaseTextview">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@drawable/title_btn_selector</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:paddingTop">10.0dip</item>
+        <item name="android:paddingRight">15.0dip</item>
+        <item name="android:paddingBottom">10.0dip</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="title_btn_return" parent="@style/title_btn">
+        <item name="android:text">@string/returns</item>
+        <item name="android:drawablePadding">1.0dip</item>
+    </style>
+    <style name="bottom_menu">
+        <item name="android:textSize">@dimen/bottom_menu_textsize</item>
+        <item name="android:textColor">@color/main_bottom_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="pub_dialog_btn">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingLeft">20.0dip</item>
+        <item name="android:paddingTop">10.0dip</item>
+        <item name="android:paddingRight">20.0dip</item>
+        <item name="android:paddingBottom">10.0dip</item>
+        <item name="android:clickable">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:onClick">onClick</item>
+    </style>
+    <style name="address_pub_up" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimBottom</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="AnimBottom" parent="@android:style/Animation">
+    </style>
+    <style name="BaseDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:backgroundDimAmount">0.0</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+    <style name="BaseProgressDialog" parent="@style/BaseDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="dot_style">
+        <item name="android:background">@drawable/dot_normal</item>
+        <item name="android:layout_width">5.0dip</item>
+        <item name="android:layout_height">5.0dip</item>
+        <item name="android:layout_marginLeft">1.5dip</item>
+        <item name="android:layout_marginRight">1.5dip</item>
+    </style>
+    <style name="tv_btn_style" parent="@style/BaseTextview">
+        <item name="android:textSize">@dimen/tv_btn_style_textsize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/base_tv_btn_selector</item>
+        <item name="android:paddingTop">6.0dip</item>
+        <item name="android:paddingBottom">6.0dip</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="engineer_title_card_id" parent="@style/BaseTextview">
+        <item name="android:textSize">@dimen/fidld_tv_desc_textsize</item>
+        <item name="android:textColor">#a6a5a5</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingTop">3.0dip</item>
+    </style>
+    <style name="engineer_total_orders" parent="@style/BaseTextview">
+        <item name="android:textSize">@dimen/fidld_tv_desc_textsize</item>
+        <item name="android:textColor">#a6a5a5</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+    <style name="invest_item_dsec" parent="@style/BaseTextview">
+        <item name="android:textSize">@dimen/invest_item_dsec_textsize</item>
+        <item name="android:textColor">#ffb7b7b7</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingTop">3.0dip</item>
+    </style>
+    <style name="invest_item_text" parent="@style/BaseTextview">
+        <item name="android:textSize">@dimen/fiyi_tv_rate_textsize</item>
+        <item name="android:textColor">#ff333333</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingTop">2.0dip</item>
+    </style>
+    <style name="invest_detail_tab" parent="@style/BaseTextview">
+        <item name="android:textSize">@dimen/invest_detail_tab_textsize</item>
+        <item name="android:textColor">@color/invest_detail_tab</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingTop">15.0dip</item>
+    </style>
+    <style name="auth_info_item">
+        <item name="android:textSize">@dimen/auth_info_item_textsize</item>
+        <item name="android:textColor">#ffa2a2a2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">7.0dip</item>
+        <item name="android:paddingBottom">7.0dip</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="bider_info_key" parent="@style/BaseTextview">
+        <item name="android:textSize">@dimen/bider_info_key_textsize</item>
+        <item name="android:textColor">#ffa2a2a2</item>
+        <item name="android:gravity">left</item>
+        <item name="android:paddingTop">8.0dip</item>
+    </style>
+    <style name="bider_info_value" parent="@style/bider_info_key">
+        <item name="android:textColor">#ff454545</item>
+    </style>
+    <style name="bid_record_item" parent="@style/BaseTextview">
+        <item name="android:textSize">@dimen/bid_record_item_textsize</item>
+        <item name="android:textColor">#ff8b8b8b</item>
+        <item name="android:gravity">left</item>
+        <item name="android:paddingTop">7.0dip</item>
+        <item name="android:paddingBottom">7.0dip</item>
+    </style>
+    <style name="login_input" parent="@style/BaseTextview">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:background">@drawable/edittext_border_with_radius</item>
+        <item name="android:padding">8.0dip</item>
+        <item name="android:longClickable">false</item>
+        <item name="android:maxLength">20</item>
+    </style>
+    <style name="login_tv_about_pwd" parent="@style/BaseTextview">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:paddingTop">8.0dip</item>
+        <item name="android:paddingBottom">15.0dip</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="register_input" parent="@style/BaseTextview">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:background">@drawable/edittext_border_with_radius</item>
+        <item name="android:padding">8.0dip</item>
+        <item name="android:longClickable">false</item>
+        <item name="android:maxLength">20</item>
+    </style>
+    <style name="register_tv_agreement" parent="@style/BaseTextview">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:paddingTop">8.0dip</item>
+        <item name="android:paddingBottom">15.0dip</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="account_data_key" parent="@style/BaseTextview">
+        <item name="android:textSize">@dimen/account_data_key_textsize</item>
+        <item name="android:textColor">#ff3a3a3a</item>
+        <item name="android:paddingTop">6.0dip</item>
+    </style>
+    <style name="account_data_value" parent="@style/BaseTextview">
+        <item name="android:textSize">@dimen/account_data_value_textsize</item>
+        <item name="android:textColor">#fffe5e0a</item>
+        <item name="android:paddingBottom">6.0dip</item>
+    </style>
+    <style name="more_ll">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:paddingTop">8.0dip</item>
+        <item name="android:paddingRight">15.0dip</item>
+        <item name="android:paddingBottom">8.0dip</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="more_tv_left" parent="@style/BaseTextview">
+        <item name="android:textColor">#ff444444</item>
+        <item name="android:paddingLeft">10.0dip</item>
+    </style>
+    <style name="help_ll">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:paddingTop">5.0dip</item>
+        <item name="android:paddingRight">15.0dip</item>
+        <item name="android:paddingBottom">5.0dip</item>
+        <item name="android:clickable">true</item>
+        <item name="android:onClick">onClick</item>
+    </style>
+    <style name="help_tv_left" parent="@style/BaseTextview">
+        <item name="android:textColor">#ff444444</item>
+        <item name="android:paddingLeft">10.0dip</item>
+    </style>
+    <style name="about_us_tv" parent="@style/BaseTextview">
+        <item name="android:textColor">#ff818181</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5.0dip</item>
+        <item name="android:paddingTop">8.0dip</item>
+        <item name="android:paddingBottom">8.0dip</item>
+        <item name="android:clickable">true</item>
+        <item name="android:drawablePadding">5.0dip</item>
+        <item name="android:onClick">onClick</item>
+    </style>
+    <style name="share_tv_way" parent="@style/BaseTextview">
+        <item name="android:textSize">10.0sp</item>
+        <item name="android:textColor">#ff464646</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:clickable">true</item>
+        <item name="android:drawablePadding">5.0dip</item>
+        <item name="android:onClick">onClick</item>
+    </style>
+    <style name="gesture_tv_warn" parent="@style/BaseTextview">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingBottom">8.0dip</item>
+    </style>
+    <style name="gesture_tv_menu" parent="@style/gesture_tv_warn">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:clickable">true</item>
+        <item name="android:onClick">onClick</item>
+    </style>
+    <style name="account_sliding_menu" parent="@style/BaseTextview">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:paddingTop">6.0dip</item>
+        <item name="android:paddingRight">10.0dip</item>
+        <item name="android:paddingBottom">6.0dip</item>
+        <item name="android:clickable">true</item>
+        <item name="android:drawablePadding">2.0dip</item>
+    </style>
+    <style name="account_info_rl">
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:paddingRight">15.0dip</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="account_info_tv_key" parent="@style/BaseTextview">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ff464646</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">8.0dip</item>
+        <item name="android:paddingBottom">8.0dip</item>
+        <item name="android:drawablePadding">5.0dip</item>
+    </style>
+    <style name="account_info_tv_value" parent="@style/account_info_tv_key">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">#ff595959</item>
+    </style>
+    <style name="recharge_tv_method" parent="@style/BaseTextview">
+        <item name="android:textColor">#ff333333</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:paddingTop">10.0dip</item>
+        <item name="android:paddingRight">15.0dip</item>
+        <item name="android:paddingBottom">10.0dip</item>
+        <item name="android:clickable">true</item>
+        <item name="android:drawablePadding">5.0dip</item>
+        <item name="android:onClick">onClick</item>
+    </style>
+    <style name="add_bank_card_tv" parent="@style/BaseTextview">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:paddingTop">8.0dip</item>
+        <item name="android:paddingRight">15.0dip</item>
+        <item name="android:paddingBottom">8.0dip</item>
+        <item name="android:clickable">true</item>
+        <item name="android:onClick">onClick</item>
+    </style>
+    <style name="add_bank_card_et" parent="@style/BaseTextview">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:paddingTop">8.0dip</item>
+        <item name="android:paddingRight">15.0dip</item>
+        <item name="android:paddingBottom">8.0dip</item>
+        <item name="android:longClickable">false</item>
+    </style>
+    <style name="my_invest_hk_key" parent="@style/BaseTextview">
+        <item name="android:textColor">#ff9d9d9d</item>
+    </style>
+    <style name="my_invest_hk_value" parent="@style/BaseTextview">
+        <item name="android:textColor">#ff6c6c6c</item>
+    </style>
+    <style name="my_invest_tv_sum_key" parent="@style/BaseTextview">
+        <item name="android:textColor">#ff333333</item>
+    </style>
+    <style name="my_invest_tv_sum_value" parent="@style/BaseTextview">
+        <item name="android:textColor">#ffff5500</item>
+        <item name="android:paddingLeft">8.0dip</item>
+    </style>
+    <style name="auto_bid_tv_key" parent="@style/BaseTextview">
+        <item name="android:textColor">#ff545454</item>
+        <item name="android:gravity">right|center</item>
+    </style>
+    <style name="auto_bid_tv_value">
+        <item name="android:textColor">#fff95800</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:paddingLeft">5.0dip</item>
+    </style>
+    <style name="auto_bid_tv_unit">
+        <item name="android:textColor">#ff999999</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:paddingLeft">3.0dip</item>
+    </style>
+    <style name="auto_bid_ll">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">12.0dip</item>
+    </style>
+    <style name="auto_bid_set_et">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">5.0dip</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="auto_bid_set_cb">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ff555555</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingLeft">18.0dip</item>
+        <item name="android:checked">true</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="captical_tv_date" parent="@style/BaseTextview">
+        <item name="android:padding">5.0dip</item>
+        <item name="android:clickable">true</item>
+        <item name="android:onClick">onClick</item>
+    </style>
+    <style name="income_record_title" parent="@style/BaseTextview">
+        <item name="android:textColor">#ff474747</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5.0dip</item>
+    </style>
+    <style name="income_record_item" parent="@style/BaseTextview">
+        <item name="android:textColor">#ff6b6b6b</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5.0dip</item>
+    </style>
+    <style name="popupwindow_tv" parent="@style/BaseTextview">
+        <item name="android:textSize">10.0sp</item>
+        <item name="android:textColor">#ff454545</item>
+    </style>
+    <style name="chyc_auto_bid_set_et">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">5.0dip</item>
+        <item name="android:clickable">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:onClick">onClick</item>
+    </style>
+    <style name="chyc_notitle_back_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="chyc_auto_bid_tv_key" parent="@style/BaseTextview">
+        <item name="android:textColor">#ff545454</item>
+        <item name="android:gravity">right</item>
+    </style>
+    <style name="chyc_auto_bid">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">5.0dip</item>
+        <item name="android:clickable">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:onClick">onClick</item>
+    </style>
+    <style name="chyc_get_auto_bid_cb">
+        <item name="android:enabled">false</item>
+        <item name="android:textColor">#ff555555</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingLeft">16.0dip</item>
+        <item name="android:clickable">false</item>
+        <item name="android:checked">false</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="chyc_set_auto_bid_cb">
+        <item name="android:textColor">#ff555555</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingLeft">16.0dip</item>
+        <item name="android:checked">false</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="auto_queue_title" parent="@style/BaseTextview">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:gravity">bottom|center</item>
+        <item name="android:paddingTop">10.0dip</item>
+        <item name="android:paddingBottom">0.0dip</item>
+    </style>
+    <style name="chyc_login" parent="@style/BaseTextview">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">10.0dip</item>
+        <item name="android:paddingBottom">10.0dip</item>
+        <item name="android:clickable">true</item>
+        <item name="android:onClick">onClick</item>
+    </style>
+    <style name="chyc_set_auto_bid_onoff">
+        <item name="android:textColor">#ff555555</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:background">@null</item>
+        <item name="android:checked">false</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="chyc_set_auto_bid_cb1">
+        <item name="android:textColor">#ff555555</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingLeft">14.0dip</item>
+        <item name="android:checked">false</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="chyc_save_button_style" parent="@style/BaseTextview">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">10.0dip</item>
+        <item name="android:clickable">true</item>
+    </style>
+    
+    <style name="engineer_detail_skills_tags" parent="@style/BaseTextview">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingLeft">4.0dip</item>
+        <item name="android:paddingRight">4.0dip</item>
+    </style>
+    
+    <style name="MyToggleButtonone" parent="@android:style/Widget.CompoundButton">  
+   </style>  
+    
+    <!-- 2016 -->
+    
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+		<!--
+			Theme customizations available in newer API levels can go in
+			res/values-vXX/styles.xml, while customizations related to
+			backward-compatibility can go here.
+
+		-->
+	</style>
+
+	<!-- Application theme. -->
+	<style name="AppTheme" parent="AppBaseTheme">
+		<!-- All customizations that are NOT specific to a particular API-level can go here. -->
+	</style>
+
+   <!--  这个是加入的代码 -->
+	<style name="mypopwindow_anim_style">
+		<item name="android:windowEnterAnimation">@anim/popshow_anim</item>
+ <!-- 指定显示的动画xml -->
+		<item name="android:windowExitAnimation">@anim/pophidden_anim</item>
+ <!-- 指定消失的动画xml -->
+	</style>
+	<style name="MyToggleButton" parent="@android:style/Widget.CompoundButton">  
+       <item name="android:button">@drawable/setting_checkbox_button</item>  
+   </style> 
+</resources>

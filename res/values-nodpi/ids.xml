@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="interpolator" />
+    <item type="id" name="bottom_bar_channel_img">false</item>
+    <item type="id" name="bottom_bar_book_btn">false</item>
+    <item type="id" name="bottom_bar_call_layout">false</item>
+    <item type="id" name="bottom_bar_nowcall_icon">false</item>
+    <item type="id" name="bottom_bar_nowcall_tv">false</item>
+    <item type="id" name="bottom_bar_nowcall_layout">false</item>
+    <item type="id" name="search_icon">false</item>
+    <item type="id" name="bottom_bar_car_layout">false</item>
+    <item type="id" name="bottom_bar_car_guide_tv">false</item>
+    
+    
+    
+    <item type="id" name="driver_location">false</item>
+    <item type="id" name="driver_crown">false</item>
+    <item type="id" name="driver_location_number">false</item>
+    <item type="id" name="driver_location_ratingBar">false</item>
+    
+    <!--engineer overlay  -->
+    <item type="id" name="engineer_img_back">false</item>
+    <item type="id" name="engineer_item_container">false</item>
+    
+    <item type="id" name="engineer_name">false</item>    
+    <item type="id" name="engineer_star">false</item>
+    <item type="id" name="engineer_skillcar">false</item>
+    <item type="id" name="engineer_feetime">false</item>
+    
+    <item type="id" name="img_engineer">false</item>
+    <item type="id" name="img_crown">false</item>
+    <item type="id" name="img_master">false</item>
+    <!-- end -->
+    <!-- engineer detail -->
+    <item type="id" name="ed_name">false</item>
+    <item type="id" name="ed_no">false</item>
+    <item type="id" name="ed_favorite">false</item>
+    <item type="id" name="ed_order_count">false</item>
+    <item type="id" name="ed_distance">false</item>
+    <item type="id" name="ed_btn_favorite">false</item>
+    <item type="id" name="ed_experience">false</item>
+    <item type="id" name="ed_hometown">false</item>
+    <item type="id" name="ed_fees">false</item>
+    <item type="id" name="ed_head">false</item>
+    <item type="id" name="ed_is_verified">false</item>
+    
+    
+    
+    
+</resources>

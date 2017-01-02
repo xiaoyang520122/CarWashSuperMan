@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/corners_whitein_huiline_4_10dp"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/my_orderitem_productName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:layout_marginLeft="8dp"
+                android:text="Product name"
+                android:textColor="@color/hui_main" />
+            <TextView
+                android:id="@+id/my_orderitem_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:padding="1dp"
+                android:text="Creat Time"
+                android:textSize="12sp"
+                android:textColor="@color/bulue_main" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e6e5e5" />
+         <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="3dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="订单编号： "
+                    android:textColor="@color/hui_main"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/my_orderitem_SN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="无信息"
+                    android:textColor="@color/hui_main"
+                    android:textSize="11sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="3dp"
+                 android:paddingRight="3dp"
+                  android:paddingBottom="3dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="服务超人： "
+                    android:textColor="@color/hui_main"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/my_orderitem_engineerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="无信息"
+                    android:textColor="@color/hui_main"
+                    android:textSize="11sp" />
+                
+
+                <TextView
+                    android:id="@+id/my_orderitem_porice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="无信息"
+                    android:gravity="center"
+                    android:textColor="@color/yellow_main"
+                    android:textSize="16sp" />
+            </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

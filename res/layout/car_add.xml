@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:toggle="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_hui_main"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp" >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="17dp"
+            android:src="@drawable/carno_hui" />
+
+        <EditText
+            android:id="@+id/addcar_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:hint="填写车牌号"
+            android:textColor="@color/hui_main"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/hui_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp" >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="15dp"
+            android:src="@drawable/car_color_hui" />
+
+        <EditText
+            android:id="@+id/addcar_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:hint="车辆颜色"
+            android:textColor="@color/hui_main"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/addadd_tomap"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:src="@drawable/left_jt_hui" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp" >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="15dp"
+            android:src="@drawable/car_type_hui" />
+
+        <EditText
+            android:id="@+id/addcar_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:hint="填写车辆品牌！"
+            android:textColor="@color/hui_main"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/hui_line" />
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp" >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="15dp"
+            android:src="@drawable/car_typemobels_hui" />
+
+        <EditText
+            android:id="@+id/addcar_typemobels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:hint="填写车辆型号！"
+            android:textColor="@color/hui_main"
+            android:textSize="14sp" />
+    </LinearLayout>
+    dckground="@color/hui_line" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:text="是否设为默认"
+            android:textColor="@color/hui_main"
+            android:textSize="14sp" />
+
+        <com.zcw.togglebutton.ToggleButton
+            android:id="@+id/addcar_togglebutton"
+            android:layout_width="48dp"
+            android:layout_height="25dp"
+            toggle:onColor="@color/bulue_main" >
+        </com.zcw.togglebutton.ToggleButton>
+    </LinearLayout>
+
+</LinearLayout>

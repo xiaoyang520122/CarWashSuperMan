@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="test_rescource">values</string>
+    
+    <string name="pull_to_refresh_pull_label">下拉可以刷新…</string>
+    <string name="pull_to_refresh_release_label">松开可以刷新…</string>
+    <string name="pull_to_refresh_refreshing_label">正在刷新…</string>
+    <string name="pull_to_refresh_from_bottom_pull_label">上拉加载更多…</string>
+    <string name="pull_to_refresh_from_bottom_release_label">松开加载更多…</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">加载中…</string>
+    <string name="app_name">洗车超人</string>
+    <string name="app_version">1.0.1</string>
+    <string name="more_version">当前版本1.0.1</string>
+    <string name="default_no_data">暂无数据</string>
+    <string name="bm_home">首页</string>
+    <string name="bm_invest">产品列表</string>
+    <string name="bm_account">我的车儿</string>
+    <string name="bm_more">更多</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="sel_engineer">查找技师</string>
+    <string name="OK">确定</string>
+    <string name="CANCEL">取消</string>
+    <string name="returns">返回</string>
+    <string name="home_safe">安全保障</string>
+    <string name="home_new_user_guid">新手指引</string>
+    <string name="bibi_sex">性        别</string>
+    <string name="bibi_nick_name">昵        称</string>
+    <string name="bibi_age">年        龄</string>
+    <string name="bibi_marital">婚姻状况</string>
+    <string name="bibi_education">学        历</string>
+    <string name="bibi_living_city">现居城市</string>
+    <string name="bibi_type_company">公司性质</string>
+    <string name="bibi_business">所属行业</string>
+    <string name="bibi_scale">公司规模</string>
+    <string name="bibi_position">职        位</string>
+    <string name="bibi_pay">薪资收入</string>
+    <string name="bibi_time_working">工作时间</string>
+    <string name="bibi_has_home">有无购房</string>
+    <string name="bibi_has_car">有无购车</string>
+    <string name="bibi_is_loan_house">有无房贷</string>
+    <string name="bibi_is_loan_car">有无车贷</string>
+    <string name="forget_password"><a href="">忘记密码</a></string>
+    <string name="remember_password">记住密码</string>
+    <string name="forget_trade_pwd"><a href="">忘记交易密码?</a></string>
+    <string name="forget_gesture_pwd">忘记手势密码</string>
+    <string name="login_with_other_account">使用其它账号登录</string>
+    <string name="bid_all"><a href="">全部投入</a></string>
+    <string name="auto_bid_desc">"1） 一经开启，长期有效，资金从此不闲置。
+
+2）单个借款标之自动投标上限为 50%。
+
+3） 标的预告发布后，系统随机抽取，产生预投标队列。账户可用余额越多，被抽中的可能性越大。当日被成功抽取过，被抽中的可能性下降。"</string>
+    <string name="chyc_login_findpass"><u>找回登录密码</u></string>
+    <string name="chyc_login_newuser"><u>新用户注册</u></string>
+    <string name="chyc_login_guangguang"><u>随便逛逛</u></string>
+
+    <!-- about us -->
+    <string name="online4s_desc">        深圳国保技术有限公司总部位于深圳，注册资本500万。爱养车(<a href="http://www.online4s.com/">www.online4s.com</a>是国内第一家基于LBS的上门养车服务平台，整合全国海量汽车维护保养技师资源，通过社会化和市场化运作，以移动互联网模式打造的全新汽车上门保养服务生态圈。致力于为广大车主提供更低成本、更高效率、更有品质保障的维修保养解决方案。</string>
+    <string name="about_title">关于我们</string>    
+    <string name="about_label_tel">客服热线：4006&#8211;121&#8211;121</string>
+    <string name="about_label_qq">企业QQ：40006121121</string>
+    <string name="about_label_email">客服邮箱：service@online4s.com</string>
+    
+    <string name="about_tel">4006121121</string>
+    <string name="about_qq">40006121121</string>
+    <string name="about_email">service@online4s.com</string>
+    <string name="serve_tel">4006121121</string>
+    
+    
+    
+    
+    
+    <string name="home_demand">发需求</string>
+    <string name="home_demand_tip">发保养维修订单给商家们抢</string>
+    <string name="home_expert">保养常识</string>
+    <string name="home_expert_tip">海量保养常识供您参考</string>
+    
+    
+    <string name="ed_title">工程师详情</string>
+    <string name="ed_order_count">%1$d单</string>
+    <string name="ed_distance">%1$.1fKM</string>
+    <string name="ed_experience">%1$d年</string>
+    <string name="ed_fees">%1$.0f　%2$.0f</string>
+    
+    <string name="ed_tabs_description">工程师描述</string>
+    
+    <!-- 2016-11-02 -->
+   <string name="action_settings">Settings</string>
+    <string name="main_button_text1">车友圈</string>
+	<string name="main_button_text2">爱车生活</string>
+	<string name="main_button_text3">美车服务</string>
+	<string name="main_button_text4">服务中心</string>
+	<string name="main_button_text5">我的</string>
+	<string name="engineer_fees_time">上门费:%2$d 工时费:%1$d</string>
+	<string name="my_menu">上门费:%2$d 工时费:%1$d</string>
+	<string name="no_car_adress_msg">您暂时未填写地址信息\n请点击添加地址信息后再查询</string>
+	<string name="no_car_info_msg">您暂时未填写车辆信息\n请点击添加车辆信息后再查询</string>
+	<string name="button_add_adress">添加新地址</string>
+	<string name="button_add_carinfo">添加车辆</string>
+	
+	<!-- 订单页 -->
+	<string name="yuyue_order">预约订单</string>
+	<string name="now_order">当前订单</string>
+	<string name="history_order">历史订单</string>
+	<string name="my_order_time_demo">下单时间：2016-08-09 16:14</string>
+	
+    <!-- 退款页面 -->
+    <string name="my_refund_time_demo">申请时间：2016-08-09 16:14</string>
+    <!-- 打赏页面 -->
+    <string name="my_smallcost_time_demo">打赏时间：2016-08-09 16:14</string>
+    <!-- 服务价格 -->
+    <string name="serveprice_str1">A、外部呵护式精洗：\t\t\t29元\n（对于购买过洗车精华素套装的客户，使用其自带套装产品洗车：19元/单）\n\nB、内外呵护式精洗：\t\t\t39元\n（对于购买过洗车精华素套装的客户，使用其自带套装产品洗车：25元/单）\n\nC、精致漆面养护：\t\t\t69元\n\nD、极致手工打蜡：\t\t\t188元\n\nE、德国铂金封釉：\t\t\t288元\n\nF、英国金钻封釉：\t\t\t588元</string>
+    <string name="serveprice_str2">白银VIP会员套餐：\t\t\t688元\n（含12次内外呵护式精洗+4次精致漆面养护+1次德国铂金封釉）\n\n黄金VIP会员套餐：\t\t\t888元\n（含18次精洗+4次精致漆面养护+1次英国金钻封釉）\n\n至尊VIP会员套餐：\t\t\t1988元\n（含36次精洗+6次精致漆面养护+4次极致手工打蜡+1次德国铂金封釉+1</string>
+<!-- 常见问题 -->
+    <string name="problem_str1">A、外部呵护式精洗：\t\t\t29元\n（对于购买过洗车精华素套装的客户，使用其自带套装产品洗车：19元/单）\n\nB、内外呵护式精洗：\t\t\t39元\n（对于购买过洗车精华素套装的客户，使用其自带套装产品洗车：25元/单）\n\nC、精致漆面养护：\t\t\t69元\n\nD、极致手工打蜡：\t\t\t188元\n\nE、德国铂金封釉：\t\t\t288元\n\nF、英国金钻封釉：\t\t\t588元</string>
+    <string name="problem_str2">一、这样洗车会花吗？\n 答：我们洗车技师采用的是呵护式洗车，主打产品洗车精华素理由悬浮剂和巴西棕榈蜡，这两种分成即阴离子和阳离子相撞产生分离子，分离子可以分离泥沙、树胶、鸟粪等污渍，所以不会洗花车。\n \n 二、你们使用的产品会不会有腐蚀性？\n 答：我们使用的产品是洗车精华素，获得国际欧盟专利，PH值为7是中性产品，不伤车漆不伤手，所以不会有腐蚀性。\n \n 三、呵护式洗车怎么能把车洗干净？\n 答：我们洗车技师采用现代高新技术，主打产品是洗车精华素，有欧盟专利，主要成分为悬浮剂和巴西棕榈蜡，内含强力渗透剂，表面活性剂，可以将污渍进行分解，在车漆表面形成保护层，不但能洗的干净，还具有保护车漆、去除静电、养护上光的多重效果。\n \n 四、呵护式洗车会划伤车漆吗？\n 答：我们洗车技师洗车不会划伤车漆，因为洗车精华素含有悬浮剂，可有效将污渍与车漆进行隔离，同事棕榈蜡会包裹住沙粒与污渍，具有良好的润滑作用，将摩擦力降到最低，保护车漆不受损伤，另外棕榈蜡可修复细小划痕，形成保护层。</string>
+    <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
+    
+    
+    
+    
+    
+    
+    <string name="msg_no_mobile">请填写电话号码！</string>
+     <string name="msg_no_add">请地图选择地址</string>
+      <string name="addmsg_no_address">请填写详细地址</string>
+       <string name="addmsg_no_type">请选择标签</string>
+       <string name="save_fail">保存失败，请重试！</string>
+       <string name="delete_fail">删除失败，请重试！</string>
+       <string name="upda_fail">更新失败，请重试！</string>
+       <string name="loading_msg">数据加载中……</string>
+       <string name="update_msg">数据保存中……</string>
+       <string name="loading_error_msg">数据加载失败！</string>
+       
+       <string name="car_type">宝马</string>
+       <string name="car_type_s">X5</string>
+       <string name="car_no">粤B：HI567</string>
+       <string name="car_color">白色</string>
+        <string name="delete">删除</string>
+         <string name="edit">编辑</string>
+         
+        <string name="addcar_nono">请填写车牌号信息！</string>
+        <string name="addcar_notype">请填车辆品牌信息！</string>
+        <string name="addcar_notypemobels">请填写车辆型号信息！</string>
+        <string name="addcar_nocolor">请填写车辆颜色信息！</string>
+        
+        <string name="yuyue_week">预约日期</string>
+        <string name="yuyue_time">预约时间</string>
+            
+       
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</resources>
+

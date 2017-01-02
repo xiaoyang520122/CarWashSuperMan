@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/driver_location"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="102.0dip"
+            android:layout_height="54dip" >
+
+            <ImageView
+                android:id="@+id/engineer_img_back"
+                android:layout_width="100.0dip"
+                android:layout_height="53dip"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="2.0dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/overlay_green3" />
+
+            <LinearLayout
+                android:id="@+id/engineer_item_container"
+                android:layout_width="100.0dip"
+                android:layout_height="49dip"
+                android:layout_marginTop="7.0dip"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="33dip"
+                    android:layout_height="30.0dip"
+                    android:layout_marginLeft="3.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:scaleType="fitXY" >
+
+                    <ImageView
+                        android:id="@+id/img_engineer"
+                        android:layout_width="41dip"
+                        android:layout_height="41dip"
+                        android:src="@drawable/default_engineer"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:layout_width="41dip"
+                        android:layout_height="41dip"
+                        android:src="@drawable/driver_cover"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4.0dip"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/engineer_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="姓名"
+                            android:textColor="#fff"
+                            android:textSize="9.0sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/engineer_skillcar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4.0dip"
+                            android:text="asdfasdf"
+                            android:textColor="#fff"
+                            android:textSize="7.0sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <com.gb.cwsup.view.MarqueeText
+                            android:id="@+id/engineer_feetime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:textColor="@color/c666"
+                            android:textSize="10.0sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <RatingBar
+                        style="@style/roomRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"  >
+                    </RatingBar>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_crown"
+                android:layout_width="25.0dip"
+                android:layout_height="13.0dip"
+                android:layout_marginLeft="18.0dip"
+                android:layout_marginTop="2.0dip"
+                android:src="@drawable/driver_crown"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_master"
+                android:layout_width="12.0dip"
+                android:layout_height="24.0dip"
+                android:layout_gravity="top|right|center"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="15.0dip"
+                android:src="@drawable/master_tag"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

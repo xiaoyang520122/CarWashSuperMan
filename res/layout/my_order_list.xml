@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_hui_main"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/my_order_now"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/now_order"
+            android:textColor="@color/bulue_main"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#c1c1c1" />
+
+        <TextView
+            android:id="@+id/my_order_yuyue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/yuyue_order"
+            android:textColor="@color/hui_main"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#c1c1c1" />
+
+        <TextView
+            android:id="@+id/my_order_history"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/history_order"
+            android:textColor="@color/hui_main"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/orderlist_now_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corners_left_blue"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="当前订单"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/orderlist_Book_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corners_bule_line_white_in_4_0"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="预约订单"
+            android:textColor="@color/bulue_main" />
+
+        <TextView
+            android:id="@+id/orderlist_history_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corners_right_white"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="历史订单"
+            android:textColor="@color/bulue_main" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/myorder_noMSG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:drawableTop="@drawable/no_msg"
+        android:gravity="center_vertical"
+        android:text="您暂无订单信息！"
+        android:textColor="@color/hui_line"
+        android:visibility="gone"
+        android:textSize="18sp" />
+
+    <ListView
+        android:id="@+id/my_order_list_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#00000000"   >
+    </ListView>
+
+</LinearLayout>

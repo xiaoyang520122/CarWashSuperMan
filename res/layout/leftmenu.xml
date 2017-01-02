@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/leftmenu_my"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bulue_H_main"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/deful_user_head" />
+
+            <TextView
+                android:id="@+id/leftmenu_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/leftmenu_mycar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <ImageView
+                android:layout_width="@dimen/my_menu_ico_size"
+                android:layout_height="@dimen/my_menu_ico_size"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/my_cheguanli_ico" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的车"
+                android:textColor="@color/hui_main" />
+        </LinearLayout>
+
+       <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/hui_line" />
+
+        <LinearLayout
+                android:id="@+id/leftmenu_history_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <ImageView
+                android:layout_width="@dimen/my_menu_ico_size"
+                android:layout_height="@dimen/my_menu_ico_size"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/my_dingdan_hui64" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="历史订单"
+                android:textColor="@color/hui_main" />
+        </LinearLayout>
+ <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/hui_line" />
+        <LinearLayout
+                android:id="@+id/leftmenu_order_now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <ImageView
+                android:layout_width="@dimen/my_menu_ico_size"
+                android:layout_height="@dimen/my_menu_ico_size"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/order_now_hui64" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="进行中的订单"
+                android:textColor="@color/hui_main" />
+        </LinearLayout>
+ <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/hui_line" />
+        <LinearLayout
+                android:id="@+id/leftmenu_mymoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <ImageView
+                android:layout_width="@dimen/my_menu_ico_size"
+                android:layout_height="@dimen/my_menu_ico_size"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/my_money_hui64" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的钱包"
+                android:textColor="@color/hui_main" />
+        </LinearLayout>
+ <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/hui_line" />
+        <LinearLayout
+                android:id="@+id/leftmenu_mymsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <ImageView
+                android:layout_width="@dimen/my_menu_ico_size"
+                android:layout_height="@dimen/my_menu_ico_size"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/my_msg_ico" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消息"
+                android:textColor="@color/hui_main" />
+        </LinearLayout>
+ <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/hui_line" />
+        <LinearLayout
+                android:id="@+id/leftmenu_myprice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <ImageView
+                android:layout_width="@dimen/my_menu_ico_size"
+                android:layout_height="@dimen/my_menu_ico_size"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/my_jiage_hui64" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务价格"
+                android:textColor="@color/hui_main" />
+        </LinearLayout>
+ <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/hui_line" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <ImageView
+                android:layout_width="@dimen/my_menu_ico_size"
+                android:layout_height="@dimen/my_menu_ico_size"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/excit_menu_hui64" />
+
+            <TextView
+                android:id="@+id/leftmenu_excit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="退出用户"
+                android:textColor="@color/hui_main" />
+
+            <ImageView
+                android:layout_width="@dimen/my_menu_ico_size"
+                android:layout_height="@dimen/my_menu_ico_size"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/my_set_hui64" />
+
+            <TextView
+                android:id="@+id/leftmenu_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设置"
+                android:textColor="@color/hui_main" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

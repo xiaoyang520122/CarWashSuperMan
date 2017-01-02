@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <TextView
+            android:id="@+id/start_scan_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/corners_blue_button20"
+            android:gravity="center"
+            android:padding="10dp"
+            android:drawableLeft="@drawable/scan_white"
+            android:text="扫码开箱"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+</LinearLayout>

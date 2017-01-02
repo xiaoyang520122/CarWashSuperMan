@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <dimen name="realtime_bottom_bar_channel_img_height">46.0dip</dimen>
+    <dimen name="realtime_bottom_bar_channel_margin_right">15dip</dimen>
+    <dimen name="bottom_bar_channel_margin_left">15.0dip</dimen>
+    <dimen name="bottom_bar_channel_margin_right">10.0dip</dimen>
+    <dimen name="bottom_bar_nowcall_icon_margin_right">3.0dip</dimen>
+    <dimen name="font_size_medium_50">14.0dip</dimen>
+    <dimen name="font_size_s_large">20.0dip</dimen>   
+    <dimen name="bottom_bar_nowcall_btn_height">46.0dip</dimen>
+    <dimen name="bottom_bar_nowcall_btn_width">160dip</dimen>
+    <dimen name="bottom_bar_nowcall_icon_height">18.0dip</dimen>
+    <dimen name="bottom_bar_nowcall_icon_width">16.0dip</dimen>
+    <dimen name="realtime_bottom_bar_margin_bottom">34.0px</dimen> 
+    <dimen name="realtime_bottom_bar_car_layout_height">848.0px</dimen>
+    <dimen name="activity_horizontal_margin">128.0dip</dimen>
+</resources>
