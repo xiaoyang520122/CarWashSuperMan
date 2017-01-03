@@ -44,6 +44,7 @@ import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
@@ -90,6 +91,7 @@ import com.gb.cwsup.utils.JsonHttpUtils;
 import com.gb.cwsup.utils.ToastUtil;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.igexin.sdk.GActivity;
 
 public class MapListsFragment extends Fragment implements OnClickListener {
 
@@ -553,7 +555,7 @@ public class MapListsFragment extends Fragment implements OnClickListener {
 		try {
 			intent = new Intent();
 			intent.setClass(getActivity(), WaitSureOrderActivity.class);
-			intent.putExtra("engineerid", ENGS.get(0).getId() + "");
+			intent.putExtra("engineerid", (ENGS.get(0).getId() + ""));
 			intent.putExtra("type", "onkey");
 			intent.putExtra("EngineerOld", ENGS.get(0));
 			startActivity(intent);
@@ -767,7 +769,9 @@ public class MapListsFragment extends Fragment implements OnClickListener {
 				ToastUtil.showToastShort(getActivity(), "抱歉，未能找到结果");
 			}
 			CARADD = result.getAddress();
-			ToastUtil.showToastShort(getActivity(), "位置：" + result.getAddress());
+			Toast toast= Toast.makeText(getActivity(), "位置：" + result.getAddress(), Toast.LENGTH_SHORT);
+			toast.setGravity(Gravity.TOP, 0, 100);
+			toast.show();
 		}
 
 		// 地理编码查询结果回调函数

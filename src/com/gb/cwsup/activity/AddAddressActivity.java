@@ -48,7 +48,6 @@ public class AddAddressActivity extends BaseActivity implements OnClickListener 
 	private int type;
 	private LoadingDialog logingDialog;
 	private List<NameValuePair> params;
-	private Handler mhandler;
 	
 	private String username,usermobile;
 	private double lat=0.0d,lng=0.0d;
@@ -56,6 +55,7 @@ public class AddAddressActivity extends BaseActivity implements OnClickListener 
 	private Intent intent;
 	private AddressBean addressBean;
 	private final String[] types=new String[]{"家","单位","其他"};
+	private Handler mhandler;
 
 	@Override
 	protected void onCreate(Bundle paramBundle) {

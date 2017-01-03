@@ -40,6 +40,7 @@ import android.widget.TextView;
 import com.gb.cwsup.AppApplication;
 import com.gb.cwsup.BaseActivity;
 import com.gb.cwsup.R;
+import com.gb.cwsup.activity.AddAddressActivity;
 import com.gb.cwsup.activity.AdressListActivity;
 import com.gb.cwsup.activity.CarListActivity;
 import com.gb.cwsup.activity.MipcaActivityCapture;
@@ -52,6 +53,7 @@ import com.gb.cwsup.entity.URLs;
 import com.gb.cwsup.fragment.MapListsFragment;
 import com.gb.cwsup.utils.ActivityManagerUtil;
 import com.gb.cwsup.utils.CallUtils;
+import com.gb.cwsup.utils.DialogUtil;
 import com.gb.cwsup.utils.JsonHttpUtils;
 import com.gb.cwsup.utils.LoadingDialog;
 import com.gb.cwsup.utils.ToastUtil;
@@ -79,6 +81,7 @@ public class WaitSureOrderActivity extends BaseActivity implements OnClickListen
 	private EngineerOld eng;
 	private ImageView callengnieer;
 	private boolean isfirstaddID = true;
+	private List<NameValuePair> params;
 
 	@Override
 	protected void onCreate(Bundle paramBundle) {
@@ -150,7 +153,7 @@ public class WaitSureOrderActivity extends BaseActivity implements OnClickListen
 		SharedPreferences sp = getSharedPreferences("register_info", Context.MODE_PRIVATE);
 		String name = sp.getString("name", "");
 		String mobile = sp.getString("mobile", "");
-		userinfo.setText(name + "  " + mobile);
+		userinfo.setText(AppApplication.USER.getName() + "  " + AppApplication.USER.getMobile());
 	}
 
 	/**
@@ -248,18 +251,22 @@ public class WaitSureOrderActivity extends BaseActivity implements OnClickListen
 	 * 提交订单信息生成订单
 	 */
 	private void submitorder() {
-
+		if (!loddialog.isShowing()) {
+			loddialog.setMessage("订单提交中……").show();
+		}
+		if (!addressIsIn())
+			return;
 		try {
 			if (josndata != null) {
-				loddialog.setMessage("订单提交中……").show();
 				Nparams = new ArrayList<NameValuePair>(2);
 				Nparams.add(new BasicNameValuePair("cartToken", josndata.getString("cartToken")));
 				Nparams.add(new BasicNameValuePair("deliveryId", 25 + ""));
-				Nparams.add(new BasicNameValuePair("engineerId", getIntent().getStringExtra("engineerid") ));
+				Nparams.add(new BasicNameValuePair("engineerId", getIntent().getStringExtra("engineerid")));
 				Nparams.add(new BasicNameValuePair("paymentMethodId", "1"));
 				Nparams.add(new BasicNameValuePair("shippingMethodId", "4"));
 				Nparams.add(new BasicNameValuePair("code", couponCodeString));
 				Nparams.add(new BasicNameValuePair("memberCarId", carBean.getId() + ""));
+				Nparams.add(new BasicNameValuePair("receiverId", addressBean.getId()));
 				new Thread(new Runnable() {
 					@Override
 					public void run() {
@@ -274,6 +281,33 @@ public class WaitSureOrderActivity extends BaseActivity implements OnClickListen
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
+	}
+
+	private boolean addressIsIn() {
+		if (addressBean == null) {
+			saveAddInfo();
+			return false;
+		}
+		return true;
+	}
+
+	protected void saveAddInfo() {
+		params = new ArrayList<NameValuePair>(8);
+		params.add(new BasicNameValuePair("consignee", AppApplication.USER.getName()));
+		params.add(new BasicNameValuePair("longitude", MapListsFragment.mlocation.getLongitude()+""));
+		params.add(new BasicNameValuePair("latitude", MapListsFragment.mlocation.getLatitude()+""));
+		params.add(new BasicNameValuePair("address", MapListsFragment.CARADD+ "# "));
+		params.add(new BasicNameValuePair("phone", AppApplication.USER.getMobile()));
+		params.add(new BasicNameValuePair("isDefault", "false"));
+		params.add(new BasicNameValuePair("type", "3"));
+		params.add(new BasicNameValuePair("areaId", MapListsFragment.mlocation.getCityCode()));
+		new Thread() {
+			@Override
+			public void run() {
+				super.run();
+				JsonHttpUtils.doPost(URLs.SAVE_ADDRESS, params, handler, JsonHttpUtils.SAVE_ADD, WaitSureOrderActivity.this);
+			}
+		}.start();
 	}
 
 	private void toCouponActivity() {
@@ -393,7 +427,7 @@ public class WaitSureOrderActivity extends BaseActivity implements OnClickListen
 				couponDiscountTv.setText("￥" + jsobj3.getString("couponDiscount"));
 				amountPayableTv.setText("￥  " + jsobj3.getString("amountPayable"));
 				getcouponinfo();
-			}else if (jsobj2.getString("type").equals("error")) {
+			} else if (jsobj2.getString("type").equals("error")) {
 				showErrorDialog(jsobj2.getString("content"));
 			}
 		} catch (JSONException e) {
@@ -402,12 +436,10 @@ public class WaitSureOrderActivity extends BaseActivity implements OnClickListen
 	}
 
 	private void showErrorDialog(String string) {
-		Builder builder=new AlertDialog.Builder(this).setTitle("提示")
-		.setMessage("生成订单信息失败，无法获得订单金额，请重试！")
-		.setPositiveButton("确定", null);
-		Dialog dialog=builder.create();
+		Builder builder = new AlertDialog.Builder(this).setTitle("提示").setMessage("生成订单信息失败，无法获得订单金额，请重试！").setPositiveButton("确定", null);
+		Dialog dialog = builder.create();
 		dialog.show();
-		
+
 		dialog.setOnDismissListener(new OnDismissListener() {
 			@Override
 			public void onDismiss(DialogInterface arg0) {
@@ -523,8 +555,27 @@ public class WaitSureOrderActivity extends BaseActivity implements OnClickListen
 		case JsonHttpUtils.CLEAR_CART:
 			isclearSuccess(valuePair.getValue());
 			break;
+		case JsonHttpUtils.SAVE_ADD:
+			issavesuccess(valuePair.getValue());
+			break;
 		default:
 			break;
+		}
+	}
+	
+	private void issavesuccess(String value) {
+		try {
+			JSONObject jo1=new JSONObject(value);
+			JSONObject jo2=jo1.getJSONObject("message");
+			if(jo2.getString("type").equals("success")){
+				addressBean=new AddressBean();
+				addressBean.setId(jo1.getJSONObject("data").optString("id"));
+				submitorder();
+			}else {
+				DialogUtil.getAlertDialog(this, getString(R.string.save_fail)).show();
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
 		}
 	}
 

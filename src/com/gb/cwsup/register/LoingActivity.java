@@ -272,10 +272,12 @@ public class LoingActivity extends BaseActivity implements OnClickListener {
 			JSONObject Jsonobj = new JSONObject(logingMsg);
 			JSONObject jsonObject = Jsonobj.getJSONObject("message");
 			JSONObject object3 = Jsonobj.getJSONObject("data");
+			
 			if (jsonObject.getString("type").equals("success")) {
 				saveregisterdate(object3.getString("name"), object3.getString("mobile"));
 				Intent intent = new Intent(LoingActivity.this, MainActivity.class);
 				startActivity(intent);
+				AppApplication.getusermsg(object3);
 				finish();
 			} else {
 				myanzhengcode.setError("验证码不正确！");

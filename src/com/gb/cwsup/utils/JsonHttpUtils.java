@@ -46,33 +46,32 @@ import com.gb.cwsup.entity.URLs;
 
 public class JsonHttpUtils {
 
-	public final static int LOGING_FLAG = 1001; //登陆
-	public final static int REQUEST_COUPON_FLAG = 1002; //订单信息（优惠券等）
-	public final static int LOGING_BY_PASS = 1003;//用户密码登陆（注册成功后系统自动后天登陆）
-	public final static int OPEN_BOX=1004;//开箱
-	public final static int SEN_PRODUCT_ID=1005;//发送订单产品ID
-	public final static int GET_ORDER_MONEY = 1006;//用户密码登陆（注册成功后系统自动后tai登陆）
-	public final static int GET_COUPON = 1007;//获取订单结算信息
-	public final static int GET_ORDER = 1008;//获取订单结算信息
-	public final static int UPDATE_OPEN_RESPONSE_MSG = 1009;//上传开箱成功后的密码等信息
-	public final static int GET_ORDER_INFORMATION = 1010;//获取订单详情
-	public final static int GET_ORDER_LIST = 1011;//获取订单列表
-	public final static int SAVE_ADD = 1012;//保存地址
-	public final static int GET_ADDS = 1013;//地址地址列表获取
-	public final static int GET_CARS = 1014;//车辆列表获取
-	public final static int SAVE_CAR = 1015;//车信息保存
-	public final static int DELETE_CAR = 1016;//删除车信息
-	public final static int UPDATE_CAR = 1017;//跟新车信息
-	public final static int UPDATE_ADDRESS = 1018;//跟新地址信息
-	public final static int DELETE_ADDRESS = 1019;//删除地址信息
-	public final static int CLEAR_CART = 1020;//清空购物车产品
-	public final static int UPDATE_USER_MSG = 1021;//修改用户信息
-	public final static int CANCEL_ORDER = 1022;//修改用户信息
-	
-	
-	
-	/**通过Eventbus传递优惠券号码！**/
+	public final static int LOGING_FLAG = 1001; // 登陆
+	public final static int REQUEST_COUPON_FLAG = 1002; // 订单信息（优惠券等）
+	public final static int LOGING_BY_PASS = 1003;// 用户密码登陆（注册成功后系统自动后天登陆）
+	public final static int OPEN_BOX = 1004;// 开箱
+	public final static int SEN_PRODUCT_ID = 1005;// 发送订单产品ID
+	public final static int GET_ORDER_MONEY = 1006;// 用户密码登陆（注册成功后系统自动后tai登陆）
+	public final static int GET_COUPON = 1007;// 获取订单结算信息
+	public final static int GET_ORDER = 1008;// 获取订单结算信息
+	public final static int UPDATE_OPEN_RESPONSE_MSG = 1009;// 上传开箱成功后的密码等信息
+	public final static int GET_ORDER_INFORMATION = 1010;// 获取订单详情
+	public final static int GET_ORDER_LIST = 1011;// 获取订单列表
+	public final static int SAVE_ADD = 1012;// 保存地址
+	public final static int GET_ADDS = 1013;// 地址地址列表获取
+	public final static int GET_CARS = 1014;// 车辆列表获取
+	public final static int SAVE_CAR = 1015;// 车信息保存
+	public final static int DELETE_CAR = 1016;// 删除车信息
+	public final static int UPDATE_CAR = 1017;// 跟新车信息
+	public final static int UPDATE_ADDRESS = 1018;// 跟新地址信息
+	public final static int DELETE_ADDRESS = 1019;// 删除地址信息
+	public final static int CLEAR_CART = 1020;// 清空购物车产品
+	public final static int UPDATE_USER_MSG = 1021;// 修改用户信息
+	public final static int CANCEL_ORDER = 1022;// 修改用户信息
+
+	/** 通过Eventbus传递优惠券号码！ **/
 	public final static int COUPON_CODE = 3001;
+
 	/**
 	 * 下载html源文件
 	 * 
@@ -99,40 +98,38 @@ public class JsonHttpUtils {
 		}
 		Log.i("requst_code", "提交地址：" + path);
 		try {
-			 // 定义HttpClient  
-            HttpClient client = new DefaultHttpClient();  
-            // 实例化HTTP方法  
-            HttpGet request = new HttpGet();  
-            request.setURI(new URI(path));  
-            HttpResponse response;
-            Log.i("requst_code", "开始添加头："+typecode);
-            if (GET_COUPON==typecode) {
-            	PersistentCookieStore cookieStore = new PersistentCookieStore(AppApplication.getInstance().getApplicationContext());  
-            	((AbstractHttpClient) client).setCookieStore(cookieStore);  
-            	 Log.i("requst_code", "请求内容头："+typecode+"=="+cookieStore.hashCode());
-            	response = client.execute(request); 
+			// 定义HttpClient
+			HttpClient client = new DefaultHttpClient();
+			// 实例化HTTP方法
+			HttpGet request = new HttpGet();
+			request.setURI(new URI(path));
+			HttpResponse response;
+			Log.i("requst_code", "开始添加头：" + typecode);
+			if (GET_COUPON == typecode) {
+				PersistentCookieStore cookieStore = new PersistentCookieStore(AppApplication.getInstance().getApplicationContext());
+				((AbstractHttpClient) client).setCookieStore(cookieStore);
+				Log.i("requst_code", "请求内容头：" + typecode + "==" + cookieStore.hashCode());
+				response = client.execute(request);
 			}
-            
-           response = client.execute(request);  
-            
-            in = new BufferedReader(new InputStreamReader(response.getEntity()  
-                    .getContent()));  
-            StringBuffer sb = new StringBuffer("");  
-            String line = "";  
-            String NL = System.getProperty("line.separator");  
-            while ((line = in.readLine()) != null) {  
-                sb.append(line + NL);  
-            }  
-            in.close();  
-            result = sb.toString();  
-			
-			
+
+			response = client.execute(request);
+
+			in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+			StringBuffer sb = new StringBuffer("");
+			String line = "";
+			String NL = System.getProperty("line.separator");
+			while ((line = in.readLine()) != null) {
+				sb.append(line + NL);
+			}
+			in.close();
+			result = sb.toString();
+
 		} catch (Exception e) {
 			Message msg = new Message();
 			msg.what = typecode;
 			msg.obj = null;
 			mhandler.sendMessage(msg);// 发送下载字符串成功消息
-			NameValuePair valuePair=new BasicNameValuePair(typecode+"", result);
+			NameValuePair valuePair = new BasicNameValuePair(typecode + "", result);
 			EventBus.getDefault().post(valuePair);
 			e.printStackTrace();
 		}
@@ -141,7 +138,7 @@ public class JsonHttpUtils {
 			msg.what = typecode;
 			msg.obj = result;
 			mhandler.sendMessage(msg);// 发送下载字符串成功消息
-			NameValuePair valuePair=new BasicNameValuePair(typecode+"", result);
+			NameValuePair valuePair = new BasicNameValuePair(typecode + "", result);
 			EventBus.getDefault().post(valuePair);
 		}
 		return result;
@@ -228,7 +225,6 @@ public class JsonHttpUtils {
 		return htmlString;
 	}
 
-
 	@SuppressLint("NewApi")
 	public static void doPost(String minterface, List<NameValuePair> params, Handler mhandler, int typecode, Context context) {
 		// HttpClientTool.network();
@@ -236,13 +232,13 @@ public class JsonHttpUtils {
 		HttpPost httpPost = new HttpPost(minterface);
 		// httpPost.setHeaders(HttpClientTool.getHeader());
 		DefaultHttpClient httpClient = new DefaultHttpClient();
-		
-		String str ="";
-		for (NameValuePair nv:params) {
-			str+=nv.getName()+"="+nv.getValue()+":";
+
+		String str = "";
+		for (NameValuePair nv : params) {
+			str += nv.getName() + "=" + nv.getValue() + ":";
 		}
-		Log.i("JsonHttpUtils", "请求参数"+typecode+"="+str);
-		
+		Log.i("JsonHttpUtils", "请求参数" + typecode + "=" + str);
+
 		try {
 			Log.i("requst_code", "开始请求！");
 			httpPost.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
@@ -255,16 +251,22 @@ public class JsonHttpUtils {
 			// Constants.li.AddCookies(httpPost);
 			/** 保持会话Session end **/
 
-			HttpResponse httpResp ;
-			if (typecode == LOGING_FLAG || typecode == LOGING_BY_PASS|| typecode == 555 ) { }
-			else {
-				PersistentCookieStore cookieStore = new PersistentCookieStore(AppApplication.getInstance().getApplicationContext());  
-            	((AbstractHttpClient) httpClient).setCookieStore(cookieStore);  
-            	 Log.i("requst_code", "请求内容头："+typecode+"=="+cookieStore.hashCode());
+			HttpResponse httpResp;
+			if (typecode == LOGING_FLAG || typecode == LOGING_BY_PASS || typecode == 555) {
+			} else {
+				PersistentCookieStore cookieStore = new PersistentCookieStore(AppApplication.getInstance().getApplicationContext());
+				((AbstractHttpClient) httpClient).setCookieStore(cookieStore);
+				List<Cookie> cookies = cookieStore.getCookies();
+				Log.i("cookies", "保持会话,cookies长度=" + cookies.size());
+				Log.i("cookies", "保持会话,cookies=" + cookies);
+				for(Cookie cookie : cookies){
+					Log.i("cookies", "保持会话,cookies=" + cookie);
+				}
 			}
-			httpResp=httpClient.execute(httpPost);
-			saveCookie(httpClient, typecode);
+			httpResp = httpClient.execute(httpPost);
+			
 			if (httpResp.getStatusLine().getStatusCode() == 200) {
+				saveCookie(httpClient, typecode);
 				// li.saveCookies(httpResp);
 				// Constants.li.saveCookies(httpResp);
 				result = EntityUtils.toString(httpResp.getEntity(), "UTF-8");
@@ -298,27 +300,29 @@ public class JsonHttpUtils {
 			httpPost.abort();
 			httpClient.getConnectionManager().shutdown();
 		}
-		Log.i("JsonHttpUtils", "请求返回数据"+typecode+"="+result);
-		if (!TextUtils.isEmpty(result)) { 
+		Log.i("JsonHttpUtils", "请求返回数据" + typecode + "=" + result);
+		if (!TextUtils.isEmpty(result)) {
 			Message msg = new Message();
 			msg.what = typecode;
 			msg.obj = result;
-			if (mhandler!=null) {
+			if (mhandler != null) {
 				mhandler.sendMessage(msg);// 发送下载字符串成功消息
 			}
-			NameValuePair valuePair=new BasicNameValuePair(typecode+"", result);
+			NameValuePair valuePair = new BasicNameValuePair(typecode + "", result);
 			EventBus.getDefault().post(valuePair);
 		}
 	}
 
 	private static void saveCookie(DefaultHttpClient httpClient, int typecode) {
-		if (typecode == LOGING_FLAG || typecode == LOGING_BY_PASS|| typecode == 555 ) {
-			PersistentCookieStore myCookieStore = AppApplication.getInstance().getPersistentCookieStore();  
-	        List<Cookie> cookies = httpClient.getCookieStore().getCookies();  
-	        for (Cookie cookie:cookies){  
-	            myCookieStore.addCookie(cookie); 
-	            Log.i("requst_code", "登陆成功,保存cookies"+cookies);
-	        } 
+//		if (typecode == LOGING_FLAG || typecode == LOGING_BY_PASS || typecode == 555) {
+			PersistentCookieStore myCookieStore = AppApplication.getInstance().getPersistentCookieStore();
+			List<Cookie> cookies = httpClient.getCookieStore().getCookies();
+			Log.i("cookies", "登陆成功,cookies长度=" + cookies.size());
+			Log.i("cookies", "登陆成功,cookies=" + cookies);
+			for (Cookie cookie : cookies) {
+				myCookieStore.addCookie(cookie);
+				Log.i("cookies", "登陆成功，保存cookie===" + cookie);
+//			}
 		}
 	}
 }

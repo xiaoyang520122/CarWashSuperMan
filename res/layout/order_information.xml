@@ -231,7 +231,7 @@
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:paddingTop="3dp"
-                android:text="开箱密码"
+                android:text="@string/scan_open"
                 android:textColor="#ffffff"
                 android:textSize="12sp" />
             </LinearLayout>
@@ -406,6 +406,7 @@
                     android:src="@drawable/car_address_yellow" />
 
                 <TextView
+                    android:id="@+id/orderinfo_carAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -437,6 +438,7 @@
                     android:src="@drawable/car_info_yellow" />
 
                 <TextView
+                    android:id="@+id/orderinfo_carinfo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

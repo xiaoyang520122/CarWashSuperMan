@@ -258,6 +258,13 @@ public class SuccessPayOrder extends BaseActivity implements OnClickListener {
 		}
 		
 	}
+	
+	@Override
+	protected void onPause() {
+		super.onPause();
+		finish();
+	}
+	
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();

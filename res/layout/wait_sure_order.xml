@@ -78,7 +78,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="left"
-                            android:text="世界之窗 顾源102"
+                            android:text="null"
                             android:textColor="#909090"
                             android:textSize="14sp" />
 
@@ -615,7 +615,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="30dp"
-            android:background="@drawable/corners_blue_button20"
+            android:background="@drawable/button_blue"
             android:gravity="center"
             android:padding="10dp"
             android:text="去支付"

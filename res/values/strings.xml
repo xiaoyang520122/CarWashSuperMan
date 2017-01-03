@@ -148,6 +148,9 @@
         
         <string name="yuyue_week">预约日期</string>
         <string name="yuyue_time">预约时间</string>
+        <string name="scan_open">扫码开箱</string>
+        <string name="get_open_password">开箱密码</string>
+        <string name="open_password_for_dialog">车主开箱密码：%s \n 请妥善保管开箱密码，此密码只能开箱一次，开箱后请务必取走钥匙！</string>
             
        
     

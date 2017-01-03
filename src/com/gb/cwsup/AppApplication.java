@@ -39,6 +39,8 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.utils.StorageUtils;
+import com.tencent.mm.sdk.openapi.IWXAPI;
+import com.tencent.mm.sdk.openapi.WXAPIFactory;
 
 public class AppApplication extends Application {
 
@@ -73,7 +75,10 @@ public class AppApplication extends Application {
 		Loginguser();
 		EventBus.getDefault().register(this);
 		setMarkerType();
-		initImageLoader(getApplicationContext());
+		/**商户APP工程中引入微信JAR包，调用API前，需要先向微信注册您的APPID，代码如下：*/
+		final IWXAPI msgApi = WXAPIFactory.createWXAPI(this, null);
+		/** 将该app注册到微信*/
+		msgApi.registerApp("wx3b2e9344b4562ae6");
 		initEngineManager(getApplicationContext());
 	}
 	
@@ -280,7 +285,7 @@ public class AppApplication extends Application {
 	}
 
 	@SuppressLint("SimpleDateFormat")
-	private void getusermsg(JSONObject jo3) {
+	public static  void getusermsg(JSONObject jo3) {
 		USER=new User();
 		SimpleDateFormat fmt=new SimpleDateFormat("yyyy年MM月dd日");
 		try {
@@ -293,7 +298,7 @@ public class AppApplication extends Application {
 			USER.setGender(jo3.getString("gender"));
 			USER.setMobile(jo3.getString("mobile"));
 			USER.setName(jo3.getString("name"));
-			JSONObject jo4=jo3.getJSONObject("name");
+			JSONObject jo4=jo3.getJSONObject("memberRank");
 			USER.setVip(jo4.getString("name"));
 //			USER.setAreaId(jo3.getString("id"));
 		} catch (JSONException e) {

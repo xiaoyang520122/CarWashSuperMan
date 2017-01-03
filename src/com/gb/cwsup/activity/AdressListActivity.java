@@ -245,9 +245,11 @@ public class AdressListActivity extends BaseActivity {
 			phone = (TextView) conView.findViewById(R.id.addlist_item_phone);
 			type = (TextView) conView.findViewById(R.id.addlist_item_type);
 			delete = (TextView) conView.findViewById(R.id.addlist_item_delete);
+			
+			String address=addbean.getAddress().split("#")[0];
 
 			nametv.setText(addbean.getUsername());
-			addtv.setText(addbean.getAddress());
+			addtv.setText(address);
 			phone.setText(addbean.getPhone());
 			type.setText(types[addbean.getType()]);
 			deleteonclick(delete, addbean.getId());
