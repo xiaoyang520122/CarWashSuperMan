@@ -68,6 +68,8 @@ public class URLs implements Serializable {
 	public final static String DELETE_CAR = HOST + "/member/cars/delete.jhtml";
 	/**更新车辆信息**/
 	public final static String UPDATE_CAR = HOST + "/member/cars/update.jhtml";
+	/**发送透传信息**/
+	public final static String POST_PAYLOAD = HOST + "/common/push_for_mobile_touchuang.jhtml";
 	
 	
 	

@@ -7,9 +7,9 @@
     <LinearLayout
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/corners_popupwindow"
         android:gravity="center"
-        android:layout_marginBottom="40dp"
         android:orientation="vertical"
         android:paddingBottom="0dp"
         android:paddingTop="15dp" >
@@ -34,103 +34,111 @@
             android:layout_width="wrap_content"
             android:layout_height="10.0dip"
             android:layout_marginBottom="5dp"
-             android:layout_marginTop="5dp"
+            android:layout_marginTop="5dp"
             android:src="@drawable/five_star" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
             android:background="#ffffff"
             android:gravity="center"
-             android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:padding="5dp"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:padding="5dp" >
 
             <TextView
-            android:id="@+id/popupwindow_item_time"
+                android:id="@+id/popupwindow_item_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="11分钟"
-                android:gravity="center"
                 android:textSize="15sp" />
+
             <TextView
-            android:id="@+id/popupwindow_item_from"
+                android:id="@+id/popupwindow_item_from"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="1.7公里"
-                android:gravity="center"
                 android:textSize="15sp" />
+
             <TextView
-            android:id="@+id/popupwindow_item_orderCount"
+                android:id="@+id/popupwindow_item_orderCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="409次"
                 android:gravity="center"
+                android:text="409次"
                 android:textSize="15sp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#ffffff"
-            android:gravity="center"
             android:layout_marginLeft="4dp"
             android:layout_marginRight="4dp"
-            android:padding="5dp"
-            android:orientation="horizontal" >
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp" >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="到达"
                 android:gravity="center"
+                android:text="到达"
                 android:textColor="#969696"
                 android:textSize="15sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="距离"
                 android:textColor="#969696"
-                android:gravity="center"
                 android:textSize="15sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="洗车"
                 android:textColor="#969696"
-                android:gravity="center"
                 android:textSize="15sp" />
         </LinearLayout>
-         <LinearLayout
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/corners_popup_buttom"
-            android:gravity="center"
+            android:layout_marginBottom="4dp"
             android:layout_marginLeft="4dp"
             android:layout_marginRight="4dp"
-             android:layout_marginBottom="4dp"
-            android:padding="5dp"
-            android:orientation="horizontal" >
+            android:background="@drawable/corners_popup_buttom"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp" >
 
             <TextView
                 android:id="@+id/popupwindow_tvbutton"
-                android:background="@drawable/corners_blue_button5"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="立即下单"
-                android:layout_marginTop="4dp"
-                android:padding="3dp"
-                android:gravity="center"
                 android:layout_marginBottom="5dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/button_blue10"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="8dp"
+                android:text="立即下单"
                 android:textColor="#ffffff"
                 android:textSize="18sp" />
-           
         </LinearLayout>
     </LinearLayout>
 

@@ -94,8 +94,7 @@ public class MyPopupGalleryAdapter extends BaseAdapter implements OnClickListene
 		/** 以下为设置到达时间 **/
 		String fee_time = (int)((jwd * con)/15*60)+"";
 		holder.timetv.setText(fee_time+"Min");
-		
-		view.findViewById(R.id.popupwindow_tvbutton).setOnClickListener(MyPopupGalleryAdapter.this);
+		setonclicklistenler(view.findViewById(R.id.popupwindow_tvbutton), meng);
 		return view;
 	}
 	
@@ -103,15 +102,24 @@ public class MyPopupGalleryAdapter extends BaseAdapter implements OnClickListene
 		public ImageView headimg;
 		public TextView nametv,timetv,fromtv,sumtv;
 	}
+	
+	private void setonclicklistenler(final View view,final EngineerOld eng1){
+		view.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				Intent intent=new Intent();
+				intent.setClass(context, WaitSureOrderActivity.class);
+				intent.putExtra("engineerid", eng1.getId());
+				intent.putExtra("EngineerOld", eng1);
+				intent.putExtra("type", "default");
+				context.startActivity(intent);
+			}
+		});
+	}
 
 	@Override
 	public void onClick(View arg0) {
-		Intent intent=new Intent();
-		intent.setClass(context, WaitSureOrderActivity.class);
-		intent.putExtra("engineerid", engineerid);
-		intent.putExtra("EngineerOld", meng);
-		intent.putExtra("type", "default");
-		context.startActivity(intent);
+		
 	}
 	/**
 	 * 一下类容为设置监听事件

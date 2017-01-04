@@ -153,7 +153,12 @@ public class WaitSureOrderActivity extends BaseActivity implements OnClickListen
 		SharedPreferences sp = getSharedPreferences("register_info", Context.MODE_PRIVATE);
 		String name = sp.getString("name", "");
 		String mobile = sp.getString("mobile", "");
-		userinfo.setText(AppApplication.USER.getName() + "  " + AppApplication.USER.getMobile());
+		try {
+			userinfo.setText(AppApplication.USER.getName() + "  " + AppApplication.USER.getMobile());
+		} catch (Exception e) {
+			userinfo.setText(name + "  " + mobile);
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -270,7 +275,7 @@ public class WaitSureOrderActivity extends BaseActivity implements OnClickListen
 				new Thread(new Runnable() {
 					@Override
 					public void run() {
-						JsonHttpUtils.doPost(URLs.CREAT_ORDER, Nparams, handler, JsonHttpUtils.GET_ORDER, WaitSureOrderActivity.this);
+						JsonHttpUtils.doPost(URLs.CREAT_ORDER, Nparams, handler, JsonHttpUtils.CREAT_ORDER, WaitSureOrderActivity.this);
 					}
 				}).start();
 			} else {
@@ -517,6 +522,7 @@ public class WaitSureOrderActivity extends BaseActivity implements OnClickListen
 				intent.putExtra("ordernumber", jO2.getString("content"));
 				intent.putExtra("Total", amountPayableTv.getText().toString());
 				startActivity(intent);
+				sendpayload(jO.optJSONObject("data"));
 				finish();
 			} else {
 				ToastUtil.showToastLong(this, "提交订单失败");
@@ -526,6 +532,20 @@ public class WaitSureOrderActivity extends BaseActivity implements OnClickListen
 			e.printStackTrace();
 		}
 
+	}
+
+	private void sendpayload(final JSONObject jsonObject) {
+		new Thread() {
+			@Override
+			public void run() {
+				super.run();
+				Nparams = new ArrayList<NameValuePair>(3);
+				Nparams.add(new BasicNameValuePair("mobile", eng.getMobile()));
+				Nparams.add(new BasicNameValuePair("title", "1009"));
+				Nparams.add(new BasicNameValuePair("description", jsonObject.optString("sn")+"#"+jsonObject.optString("createDate")+"#"+jsonObject.optString("name")));
+				JsonHttpUtils.doPost(URLs.POST_PAYLOAD, Nparams, handler, JsonHttpUtils.PSOT_PAYLOAD, WaitSureOrderActivity.this);
+			}
+		}.start();
 	}
 
 	/**
@@ -549,7 +569,7 @@ public class WaitSureOrderActivity extends BaseActivity implements OnClickListen
 		case JsonHttpUtils.GET_COUPON:
 			jiexieCoupon(valuePair.getValue());
 			break;
-		case JsonHttpUtils.GET_ORDER:
+		case JsonHttpUtils.CREAT_ORDER:
 			isCreatSuccess(valuePair.getValue());
 			break;
 		case JsonHttpUtils.CLEAR_CART:

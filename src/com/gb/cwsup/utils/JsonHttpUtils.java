@@ -68,6 +68,10 @@ public class JsonHttpUtils {
 	public final static int CLEAR_CART = 1020;// 清空购物车产品
 	public final static int UPDATE_USER_MSG = 1021;// 修改用户信息
 	public final static int CANCEL_ORDER = 1022;// 修改用户信息
+	/**创建订单**/
+	public final static int CREAT_ORDER = 1023;// 
+	/**发送透传信息**/
+	public final static int PSOT_PAYLOAD = 1024;// 
 
 	/** 通过Eventbus传递优惠券号码！ **/
 	public final static int COUPON_CODE = 3001;

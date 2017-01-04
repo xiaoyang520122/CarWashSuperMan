@@ -269,7 +269,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="30dp"
-            android:background="@drawable/corners_blue_button20"
+            android:background="@drawable/button_blue20"
             android:gravity="center"
             android:padding="10dp"
             android:text="完 成"
