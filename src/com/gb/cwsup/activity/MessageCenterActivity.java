@@ -4,11 +4,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.gb.cwsup.BaseActivity;
 import com.gb.cwsup.R;
-import com.gb.cwsup.adapter.MyOrderAdapter;
 import com.gb.cwsup.adapter.MydefaultAdapter;
 import com.gb.cwsup.utils.ActivityManagerUtil;
 

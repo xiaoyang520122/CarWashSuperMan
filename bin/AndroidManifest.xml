@@ -86,6 +86,7 @@
             android:label="PushService"
             android:process=":pushservice" >
         </service>
+        <service android:enabled="true" android:name="com.gb.cwsup.server.Music" /> 
 
         <receiver android:name="com.igexin.download.DownloadReceiver" >
             <intent-filter>

@@ -18,7 +18,7 @@ import com.zcw.togglebutton.ToggleButton;
 import com.zcw.togglebutton.ToggleButton.OnToggleChanged;
 
 public class EditerCenterActivity extends BaseActivity implements OnClickListener {
-	private ToggleButton tog,openlight;
+	private ToggleButton tog;
 	private SharedPreferences sp;
 
 	@Override

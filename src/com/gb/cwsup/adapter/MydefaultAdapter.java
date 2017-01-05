@@ -1,16 +1,10 @@
 package com.gb.cwsup.adapter;
 
-import java.util.List;
-
-import com.gb.cwsup.R;
-import com.gb.cwsup.entity.OrderItem;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.TextView;
 
 public class MydefaultAdapter extends BaseAdapter {
 	

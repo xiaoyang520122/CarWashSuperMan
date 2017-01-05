@@ -3,7 +3,6 @@ package com.gb.cwsup.activity;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import org.apache.http.NameValuePair;
@@ -25,13 +24,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
 
-import com.baidu.platform.comapi.map.v;
 import com.gb.cwsup.BaseActivity;
 import com.gb.cwsup.R;
 import com.gb.cwsup.entity.URLs;

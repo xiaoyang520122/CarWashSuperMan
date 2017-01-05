@@ -3,8 +3,6 @@ package com.gb.cwsup.activity;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.security.auth.PrivateCredentialPermission;
-
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.greenrobot.eventbus.EventBus;
@@ -26,8 +24,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import com.baidu.mapapi.SDKInitializer;
 import com.gb.cwsup.BaseActivity;

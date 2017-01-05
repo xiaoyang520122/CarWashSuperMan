@@ -30,7 +30,6 @@ import com.gb.cwsup.scan.decoding.InactivityTimer;
 import com.gb.cwsup.scan.view.ViewfinderView;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
-import com.zcw.togglebutton.ToggleButton.OnToggleChanged;
 /**
  * Initial the camera
  * @author Ryan.Tang

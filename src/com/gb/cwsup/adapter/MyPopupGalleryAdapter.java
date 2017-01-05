@@ -2,12 +2,6 @@ package com.gb.cwsup.adapter;
 
 import java.util.List;
 
-import com.bumptech.glide.Glide;
-import com.gb.cwsup.R;
-import com.gb.cwsup.activity.order.WaitSureOrderActivity;
-import com.gb.cwsup.entity.EngineerOld;
-import com.gb.cwsup.fragment.MapListsFragment;
-
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -19,13 +13,18 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.gb.cwsup.R;
+import com.gb.cwsup.activity.order.WaitSureOrderActivity;
+import com.gb.cwsup.entity.EngineerOld;
+import com.gb.cwsup.fragment.MapListsFragment;
+
 public class MyPopupGalleryAdapter extends BaseAdapter implements OnClickListener {
 	
 	private Context context;
 	private int laoutyid;
 	private LayoutInflater inflater;
 	private List<EngineerOld> engs;
-	private long engineerid;
 	private EngineerOld meng;
 	
 	public MyPopupGalleryAdapter(Context context,int laoutyid,List<EngineerOld> engs){
@@ -68,7 +67,6 @@ public class MyPopupGalleryAdapter extends BaseAdapter implements OnClickListene
 			view.setTag(holder);
 		}
 		meng=engs.get(postion);
-		engineerid=meng.getId();
 		try {
 			Glide.with(context)  
 			.load(R.drawable.main_table_ico_midle)  

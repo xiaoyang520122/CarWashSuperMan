@@ -22,12 +22,11 @@ import com.gb.cwsup.BaseActivity;
 import com.gb.cwsup.R;
 import com.gb.cwsup.utils.ActivityManagerUtil;
 import com.gb.cwsup.utils.JsonHttpUtils;
-import com.gb.cwsup.utils.LoadingDialog;
 
 public class CouponActivity extends BaseActivity {
 
 	private ListView couponlistview;
-	private final static int GET_COUPON=JsonHttpUtils.REQUEST_COUPON_FLAG;
+//	private final static int GET_COUPON=JsonHttpUtils.REQUEST_COUPON_FLAG;
 	private JSONArray jsonArray;
 	private LayoutInflater inflater;
 	private String CONPON_CODE="";

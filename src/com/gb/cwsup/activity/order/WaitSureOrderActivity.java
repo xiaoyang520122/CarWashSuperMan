@@ -266,7 +266,7 @@ public class WaitSureOrderActivity extends BaseActivity implements OnClickListen
 				Nparams = new ArrayList<NameValuePair>(2);
 				Nparams.add(new BasicNameValuePair("cartToken", josndata.getString("cartToken")));
 				Nparams.add(new BasicNameValuePair("deliveryId", 25 + ""));
-				Nparams.add(new BasicNameValuePair("engineerId", getIntent().getStringExtra("engineerid")));
+				Nparams.add(new BasicNameValuePair("engineerId", eng.getId()+""));
 				Nparams.add(new BasicNameValuePair("paymentMethodId", "1"));
 				Nparams.add(new BasicNameValuePair("shippingMethodId", "4"));
 				Nparams.add(new BasicNameValuePair("code", couponCodeString));
@@ -515,14 +515,15 @@ public class WaitSureOrderActivity extends BaseActivity implements OnClickListen
 		try {
 			JSONObject jO = new JSONObject(value);
 			JSONObject jO2 = jO.getJSONObject("message");
+			JSONObject jO3 = jO.getJSONObject("data");
 			if (jO2.getString("type").equals("success")) {
 				Intent intent = new Intent(this, SuccessPayOrder.class);
 				int spitem = spinner.getSelectedItemPosition();
 				intent.putExtra("productname", AppApplication.PRODUCTLIST.get(spitem).getName());
-				intent.putExtra("ordernumber", jO2.getString("content"));
+				intent.putExtra("ordernumber", jO3.getString("sn"));
 				intent.putExtra("Total", amountPayableTv.getText().toString());
 				startActivity(intent);
-				sendpayload(jO.optJSONObject("data"));
+				sendpayload(jO3);
 				finish();
 			} else {
 				ToastUtil.showToastLong(this, "提交订单失败");
@@ -542,8 +543,13 @@ public class WaitSureOrderActivity extends BaseActivity implements OnClickListen
 				Nparams = new ArrayList<NameValuePair>(3);
 				Nparams.add(new BasicNameValuePair("mobile", eng.getMobile()));
 				Nparams.add(new BasicNameValuePair("title", "1009"));
-				Nparams.add(new BasicNameValuePair("description", jsonObject.optString("sn")+"#"+jsonObject.optString("createDate")+"#"+jsonObject.optString("name")));
-				JsonHttpUtils.doPost(URLs.POST_PAYLOAD, Nparams, handler, JsonHttpUtils.PSOT_PAYLOAD, WaitSureOrderActivity.this);
+				try {
+					Nparams.add(new BasicNameValuePair("description", jsonObject.optString("sn")
+							+"#"+jsonObject.optString("createDate")+"#"+jsonObject.optString("name")));
+					JsonHttpUtils.doPost(URLs.POST_PAYLOAD, Nparams, handler, JsonHttpUtils.PSOT_PAYLOAD, WaitSureOrderActivity.this);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
 		}.start();
 	}
@@ -593,8 +599,10 @@ public class WaitSureOrderActivity extends BaseActivity implements OnClickListen
 				submitorder();
 			}else {
 				DialogUtil.getAlertDialog(this, getString(R.string.save_fail)).show();
+				loddialog.dismiss();
 			}
 		} catch (JSONException e) {
+			loddialog.dismiss();
 			e.printStackTrace();
 		}
 	}

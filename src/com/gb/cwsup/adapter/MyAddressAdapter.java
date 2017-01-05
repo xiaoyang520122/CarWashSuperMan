@@ -8,12 +8,10 @@ import android.widget.BaseAdapter;
 
 public class MyAddressAdapter extends BaseAdapter {
 	
-	private Context context;
 	private int laoutyid;
 	private LayoutInflater inflater;
 	
 	public MyAddressAdapter(Context context,int laoutyid){
-		this.context=context;
 		this.laoutyid=laoutyid;
 		inflater=LayoutInflater.from(context);
 	}

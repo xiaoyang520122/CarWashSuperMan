@@ -18,7 +18,6 @@ import android.widget.TextView;
 import com.gb.cwsup.BaseActivity;
 import com.gb.cwsup.R;
 import com.gb.cwsup.activity.order.WaitSureOrderActivity;
-import com.gb.cwsup.adapter.MyAddressAdapter;
 import com.gb.cwsup.entity.EngineerOld;
 import com.gb.cwsup.fragment.MapListsFragment;
 import com.gb.cwsup.utils.ActivityManagerUtil;

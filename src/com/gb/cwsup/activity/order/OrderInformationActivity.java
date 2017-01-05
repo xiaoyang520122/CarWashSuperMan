@@ -36,7 +36,6 @@ import com.gb.cwsup.utils.CallUtils;
 import com.gb.cwsup.utils.DialogUtil;
 import com.gb.cwsup.utils.JsonHttpUtils;
 import com.gb.cwsup.utils.LoadingDialog;
-import com.gb.cwsup.utils.ToastUtil;
 
 public class OrderInformationActivity extends BaseActivity implements OnClickListener {
 

@@ -241,7 +241,8 @@ public class JsonHttpUtils {
 		for (NameValuePair nv : params) {
 			str += nv.getName() + "=" + nv.getValue() + ":";
 		}
-		Log.i("JsonHttpUtils", "请求参数" + typecode + "=" + str);
+		Log.i("JsonHttpUtils", "请求网址" + typecode + "为：" + minterface);
+		Log.i("JsonHttpUtils", "请求参数" + typecode + "为：" + str);
 
 		try {
 			Log.i("requst_code", "开始请求！");
@@ -256,7 +257,7 @@ public class JsonHttpUtils {
 			/** 保持会话Session end **/
 
 			HttpResponse httpResp;
-			if (typecode == LOGING_FLAG || typecode == LOGING_BY_PASS || typecode == 555) {
+			if (typecode == LOGING_FLAG || typecode == LOGING_BY_PASS || typecode == 555 || typecode ==PSOT_PAYLOAD) {
 			} else {
 				PersistentCookieStore cookieStore = new PersistentCookieStore(AppApplication.getInstance().getApplicationContext());
 				((AbstractHttpClient) httpClient).setCookieStore(cookieStore);
@@ -304,7 +305,7 @@ public class JsonHttpUtils {
 			httpPost.abort();
 			httpClient.getConnectionManager().shutdown();
 		}
-		Log.i("JsonHttpUtils", "请求返回数据" + typecode + "=" + result);
+		Log.i("JsonHttpUtils", "请求返回数据" + typecode + "为：" + result);
 		if (!TextUtils.isEmpty(result)) {
 			Message msg = new Message();
 			msg.what = typecode;

@@ -5,18 +5,15 @@ import java.util.List;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.provider.VoicemailContract;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.gb.cwsup.BaseActivity;
 import com.gb.cwsup.R;
-import com.gb.cwsup.adapter.MyOrderAdapter;
 import com.gb.cwsup.adapter.MyViewPagerAdapter;
 import com.gb.cwsup.utils.ActivityManagerUtil;
 

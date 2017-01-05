@@ -54,8 +54,8 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
 	private final static int REGISTER_CODE = 4;
 	/** 用户普通登陆 **/
 	private final static int LOGING_BYPASS = JsonHttpUtils.LOGING_BY_PASS;
-	/** 用户信息提交 **/
-	private final static int UPDATE_INFO = 6;
+//	/** 用户信息提交 **/
+//	private final static int UPDATE_INFO = 6;
 
 	@Override
 	protected void onCreate(Bundle paramBundle) {
